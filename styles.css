@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #232946;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #e0eafc, #cfdef3, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x: hidden;
+}
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    z-index: 0;
+}
+.shape1 { width: 160px; height: 160px; top: 10%; left: 8%; background: #4a90e2;}
+.shape2 { width: 90px; height: 90px; bottom: 18%; right: 12%; background: #ffe082;}
+.shape3 { width: 60px; height: 60px; top: 60%; left: 70%; background: #cfdef3;}
+
+header {
+    background: rgba(74, 144, 226, 0.92);
+    color: #fff;
+    padding: 36px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(74, 144, 226, 0.12);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    position: relative;
+    z-index: 1;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    font-size: 19px;
+    letter-spacing: 1px;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+nav a:hover {
+    color: #ffe082;
+    text-shadow: 0 2px 8px #ffe08280;
+}
+main {
+    max-width: 630px;
+    margin: 50px auto 0 auto;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 22px;
+    box-shadow: 0 8px 40px rgba(74, 144, 226, 0.12), 0 1.5px 8px rgba(34,34,34,0.07);
+    padding: 50px 36px 36px 36px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 2;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+img {
+    border-radius: 14px;
+    margin-top: 28px;
+    box-shadow: 0 4px 24px rgba(74, 144, 226, 0.18);
+    max-width: 92%;
+    transition: transform 0.3s;
+}
+img:hover {
+    transform: scale(1.04) rotate(-2deg);
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 24px 0 12px 0;
+    flex-wrap: wrap;
+}
+button#alertButton, button#infoButton, button#contactButton {
+    background: linear-gradient(90deg, #4a90e2 0%, #357ab7 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: inherit;
+    box-shadow: 0 2px 12px rgba(74, 144, 226, 0.16);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button#alertButton:hover, button#infoButton:hover, button#contactButton:hover {
+    background: linear-gradient(90deg, #357ab7 0%, #4a90e2 100%);
+    transform: scale(1.07);
+}
+.details {
+    background: rgba(255,255,255,0.75);
+    border-radius: 12px;
+    margin: 24px 0;
+    padding: 18px 10px;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.07);
+    text-align: left;
+}
+.details ul {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+footer {
+    background: rgba(34, 34, 34, 0.92);
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -2px 12px rgba(34, 34, 34, 0.18);
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        margin: 20px 15px;
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    header, footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 16px;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+    button#alertButton, button#infoButton, button#contactButton {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 18px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+    button#alertButton, button#infoButton, button#contactButton {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    main {
+        padding: 18px 5px;
+    }
+}
+
+
